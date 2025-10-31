@@ -6,8 +6,8 @@ export default function Pricing() {
     const plans = [
         {
             name: 'Starter',
-            monthly: 99,
-            annual: 990,
+            monthly: 20,
+            annual: 192,
             features: [
                 'Up to 50 users',
                 '5 projects',
@@ -18,8 +18,8 @@ export default function Pricing() {
         },
         { 
             name: 'Pro',
-            monthly: 299,
-            annual: 2990,
+            monthly: 45,
+            annual: 432,
             features: [
                 'Up to 500 users',
                 'Unlimited projects',
@@ -32,8 +32,8 @@ export default function Pricing() {
         },
         {
             name: 'Enterprise',
-            monthly: 999,
-            annual: 9990,
+            monthly: 65,
+            annual: 624,
             features: [
               'Unlimited users',
               'Unlimited projects',
@@ -55,6 +55,15 @@ export default function Pricing() {
         }).format(amount)
       }
     
+    const calculateSavings = () => {
+      const savings = plans.map(plan => {
+        const yearlyMonthly = plan.monthly * 12
+        return ((yearlyMonthly - plan.annual) / yearlyMonthly) * 100
+      })
+      const averageSavings = savings.reduce((sum, val) => sum + val, 0) / savings.length
+      return Math.round(averageSavings)
+    }
+    
       return (
         <section className="section" aria-labelledby="pricing-title">
           <div className="container">
@@ -75,7 +84,7 @@ export default function Pricing() {
                 <span className={`pricing-switch-slider ${annual ? 'annual' : ''}`} />
               </button>
               <span className={annual ? 'active' : ''}>Annual</span>
-              {annual && <span className="pricing-savings">Save 20%</span>}
+              {annual && <span className="pricing-savings">Save {calculateSavings()}%</span>}
             </div>
     
             <div className="pricing-grid" role="list">
