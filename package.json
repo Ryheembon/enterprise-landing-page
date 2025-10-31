@@ -1,7 +1,8 @@
 {
   "name": "enterprise-landing-page",
+  "description": "A modern, responsive enterprise landing page built with React, showcasing best practices in web development, accessibility, and user experience.",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
