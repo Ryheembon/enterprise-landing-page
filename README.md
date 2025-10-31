@@ -4,6 +4,10 @@ A modern, responsive enterprise landing page built with React, showcasing best p
 
 ![Enterprise Landing Page](https://img.shields.io/badge/React-19.1.1-blue) ![Vite](https://img.shields.io/badge/Vite-7.1.7-646CFF) ![License](https://img.shields.io/badge/License-MIT-green)
 
+## 🌐 Live Demo
+
+**[View Live Site](https://ryheembon.github.io/enterprise-landing-page/)**
+
 ## ✨ Features
 
 - **Responsive Design** - Mobile-first approach with breakpoints for tablet and desktop
@@ -42,6 +46,7 @@ npm run dev
 - `npm run build` - Build for production
 - `npm run preview` - Preview production build locally
 - `npm run lint` - Run ESLint
+- `npm run deploy` - Build and deploy to GitHub Pages
 
 ## 📁 Project Structure
 
@@ -102,10 +107,16 @@ enterprise-landing-page/
 3. Deploy automatically on push
 
 ### GitHub Pages
+1. Run the deploy command:
 ```bash
-npm run build
-# Deploy the dist folder to GitHub Pages
+npm run deploy
 ```
+2. Enable GitHub Pages in your repository settings:
+   - Go to Settings → Pages
+   - Source: Select `gh-pages` branch
+   - Save
+
+Your site will be live at: `https://ryheembon.github.io/enterprise-landing-page/`
 
 ## 📝 License
 
